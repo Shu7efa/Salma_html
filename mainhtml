@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Year</title>
+    <title style="display: none;">Happy New Year</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -36,9 +35,10 @@
         }
 
         #salmaLogo {
-            width: 120px; /* Adjust the width of the logo as needed */
+            width: 40px; /* Adjust the width of the logo as needed */
             height: auto; /* Maintain aspect ratio */
             margin-right: 10px; /* Adjust the spacing between the logo and the text */
+            transition: transform 0.3s ease-in-out; /* Add a smooth transition */
         }
 
         #salmaName {
@@ -78,6 +78,20 @@
             margin-top: 20px;
         }
 
+        #salmaLogo:hover {
+            transform: scale(1.2); /* Increase size on hover */
+            animation: heartbeat 1s infinite; /* Add heartbeat animation on hover */
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
         @keyframes gradientAnimation {
             0% {
                 background-position: 0% 50%;
@@ -100,14 +114,13 @@
 <body>
     <div id="alhamdulillah"> ❤️ALHAMDUILLAH FOR EVERYTHING❤️</div>
     <div id="salmaContainer">
-        
+        <img id="salmaLogo" src="sh3.jpg" alt="sh3"> <!-- Replace 'https://example.com/your_logo_url.png' with the actual URL or path of your logo -->
         <div id="salmaName">سلمہ</div>
     </div>
     <div id="message">Happy New Year, <span id="receiverName">SALMA SACHE _THE QUEEN ❤️</span>!</div>
     <div id="thought"></div>
-    <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span></div>
+    <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span>.</div>
     <div id="salmaMissU">SALMA MISS U</div>
-    <img id="salmaLogo" src="sh3.jpg" alt="sh3"> <!-- Replace 'https://example.com/your_logo_url.png' with the actual URL or path of your logo -->
 
     <script>
         function setNewYearMessage() {
@@ -119,16 +132,7 @@
                 "Professionally, may you achieve great success, for you are truly great and trustful.",
                 "May your journey be filled with motivation and inspiration, for you are an inspiration to us all.",
                 "Appreciation for your dedication and impactful contributions. We miss you and love you, Princess."
-                 
             ];
 
             // Combine all thoughts into one string with line breaks
-            const allThoughts = thoughts.join('\n');
-
-            document.getElementById('thought').innerText = allThoughts;
-        }
-
-        setNewYearMessage();
-    </script>
-</body>
-</html>
+            const allThoughts = thoughts.join('\n
