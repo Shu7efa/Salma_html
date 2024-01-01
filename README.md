@@ -107,7 +107,7 @@
     <div id="thought"></div>
     <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span></div>
     <div id="salmaMissU">SALMA MISS U</div>
-    <img id="salmaLogo" src="F:\My Cloudage\sh3.jpg" alt="sh3"> <!-- Replace 'https://example.com/your_logo_url.png' with the actual URL or path of your logo -->
+    <img id="salmaLogo" src="sh3.jpg" alt="sh3"> <!-- Replace 'https://example.com/your_logo_url.png' with the actual URL or path of your logo -->
 
     <script>
         function setNewYearMessage() {
