@@ -102,7 +102,7 @@
     <div id="thought"></div>
     <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span>.</div>
     <div id="salmaMissU">SALMA MISS U</div>
-
+     <img id="salmaLogo" src="sh3.jpg" alt="sh3">
     <script>
         function setNewYearMessage() {
             const receiverName = "SALMA SACHE _THE QUEEN ❤️";
