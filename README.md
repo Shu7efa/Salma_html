@@ -36,7 +36,7 @@
         }
 
         #salmaLogo {
-            width: 120px; /* Adjust the width of the logo as needed */
+            width: 40px; /* Adjust the width of the logo as needed */
             height: auto; /* Maintain aspect ratio */
             margin-right: 10px; /* Adjust the spacing between the logo and the text */
         }
@@ -100,14 +100,19 @@
 <body>
     <div id="alhamdulillah"> ❤️ALHAMDUILLAH FOR EVERYTHING❤️</div>
     <div id="salmaContainer">
-        
         <div id="salmaName">سلمہ</div>
     </div>
     <div id="message">Happy New Year, <span id="receiverName">SALMA SACHE _THE QUEEN ❤️</span>!</div>
     <div id="thought"></div>
-    <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span></div>
+    <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span>.</div>
     <div id="salmaMissU">SALMA MISS U</div>
-    <img id="salmaLogo" src="sh3.jpg" alt="sh3"> <!-- Replace 'https://example.com/your_logo_url.png' with the actual URL or path of your logo -->
+    <img id="salmaLogo" src="sh3.jpg" alt="sh3">
+    
+    <!-- Looping audio -->
+    <audio id="audioPlayer" controls loop autoplay>
+        <source src="Yaara.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <script>
         function setNewYearMessage() {
@@ -124,11 +129,4 @@
             // Combine all thoughts into one string with line breaks
             const allThoughts = thoughts.join('\n');
 
-            document.getElementById('thought').innerText = allThoughts;
-        }
-
-        setNewYearMessage();
-    </script>
-</body>
-</html>
-
+            document.getElementById('thought
