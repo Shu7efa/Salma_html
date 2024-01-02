@@ -62,7 +62,7 @@
 </head>
 
 <body>
-    <div id="heartButton" onclick="toggleAudio()">
+    <div id="heartButton">
         ❤️ Click on it ❤️
     </div>
 
@@ -83,6 +83,8 @@
 
     <script>
         let isPlaying = true;
+        const heartButton = document.getElementById('heartButton');
+        heartButton.addEventListener('click', toggleAudio);
 
         function toggleAudio() {
             const audio = document.getElementById('audioPlayer');
