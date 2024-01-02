@@ -78,6 +78,15 @@
             margin-top: 20px;
         }
 
+        #heartButton {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 36px;
+            margin-top: 20px;
+            color: red;
+        }
+
         @keyframes gradientAnimation {
             0% {
                 background-position: 0% 50%;
@@ -108,11 +117,8 @@
     <div id="salmaMissU">SALMA MISS U</div>
     <img id="salmaLogo" src="sh3.jpg" alt="sh3">
     
-    <!-- Looping audio -->
-    <audio id="audioPlayer" controls loop autoplay>
-        <source src="Yaara.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- Heart-shaped audio button -->
+    <button id="heartButton" onclick="toggleAudio()">❤️ Click on it</button>
 
     <script>
         function setNewYearMessage() {
@@ -129,4 +135,16 @@
             // Combine all thoughts into one string with line breaks
             const allThoughts = thoughts.join('\n');
 
-            document.getElementById('thought
+            document.getElementById('thought').innerText = allThoughts;
+        }
+
+        function toggleAudio() {
+            const audio = new Audio('Yaara.mp3');
+            audio.loop = true;
+            audio.play();
+        }
+
+        setNewYearMessage();
+    </script>
+</body>
+</html>
