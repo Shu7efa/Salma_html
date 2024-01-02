@@ -36,6 +36,10 @@
             margin-bottom: 20px;
         }
 
+        #salmaNameContainer {
+            position: relative;
+        }
+
         #salmaName {
             font-size: 100px;
             font-weight: bold;
@@ -43,10 +47,17 @@
             margin-top: 20px;
         }
 
+        #instruction {
+            position: absolute;
+            bottom: -40px;
+            font-size: 18px;
+            color: #fff;
+        }
+
         #quote {
             font-size: 18px;
             font-weight: bold;
-            color: #fff;
+            color: #000;
             margin-top: 20px;
         }
 
@@ -68,7 +79,10 @@
 
     <div id="alhamdulillah">Alhamdulillah For Being Her With Me</div>
 
-    <div id="salmaName">سلمہ</div>
+    <div id="salmaNameContainer" onclick="toggleAudio()">
+        <div id="salmaName">سلمہ</div>
+        <div id="instruction">Please touch on your name</div>
+    </div>
 
     <div id="quote">
         "O Allah, thank you for Salma. Alhamdulillah for our love, success, and respect. I pray for a lasting bond,
