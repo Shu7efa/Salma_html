@@ -46,7 +46,7 @@
         #quote {
             font-size: 18px;
             font-weight: bold;
-            color: #000;
+            color: #fff;
             margin-top: 20px;
         }
 
@@ -62,7 +62,7 @@
 </head>
 
 <body>
-    <div id="heartButton">
+    <div id="heartButton" onclick="toggleAudio()">
         ❤️ Click on it ❤️
     </div>
 
@@ -83,8 +83,6 @@
 
     <script>
         let isPlaying = true;
-        const heartButton = document.getElementById('heartButton');
-        heartButton.addEventListener('click', toggleAudio);
 
         function toggleAudio() {
             const audio = document.getElementById('audioPlayer');
