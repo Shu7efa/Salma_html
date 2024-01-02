@@ -129,10 +129,4 @@
             // Combine all thoughts into one string with line breaks
             const allThoughts = thoughts.join('\n');
 
-            document.getElementById('thought').innerText = allThoughts;
-        }
-
-        setNewYearMessage();
-    </script>
-</body>
-</html>
+            document.getElementById('thought
