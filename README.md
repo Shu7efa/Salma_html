@@ -24,9 +24,10 @@
         }
 
         #heartButton {
-            font-size: 40px;
+            font-size: 24px;
             cursor: pointer;
             margin-top: 20px;
+            text-decoration: underline; /* Added underline */
         }
 
         #alhamdulillah {
@@ -63,7 +64,7 @@
 
 <body>
     <div id="heartButton" onclick="toggleAudio()">
-        ❤️ Click or touch twice and feel it, Salma ❤️
+        ❤️ Click or touch twice here and feel it, Salma ❤️
     </div>
 
     <div id="alhamdulillah">Alhamdulillah For Being Her With Me</div>
