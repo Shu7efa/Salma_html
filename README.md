@@ -35,12 +35,6 @@
             margin-bottom: 10px;
         }
 
-        #salmaLogo {
-            width: 40px; /* Adjust the width of the logo as needed */
-            height: auto; /* Maintain aspect ratio */
-            margin-right: 10px; /* Adjust the spacing between the logo and the text */
-        }
-
         #salmaName {
             font-size: 60px;
             font-weight: bold;
@@ -79,12 +73,14 @@
         }
 
         #heartButton {
-            background-color: transparent;
-            border: none;
             cursor: pointer;
-            font-size: 36px;
-            margin-top: 20px;
+            font-size: 32px;
             color: red;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #heartButton:hover {
+            transform: scale(1.2);
         }
 
         @keyframes gradientAnimation {
@@ -115,10 +111,15 @@
     <div id="thought"></div>
     <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span>.</div>
     <div id="salmaMissU">SALMA MISS U</div>
-    <img id="salmaLogo" src="sh3.jpg" alt="sh3">
     
-    <!-- Heart-shaped audio button -->
-    <button id="heartButton" onclick="toggleAudio()">❤️ Click on it</button>
+    <!-- Heart-shaped button -->
+    <div id="heartButton" onclick="toggleAudio()">❤️</div>
+
+    <!-- Looping audio -->
+    <audio id="audioPlayer" loop>
+        <source src="Yaara.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <script>
         function setNewYearMessage() {
@@ -139,9 +140,12 @@
         }
 
         function toggleAudio() {
-            const audio = new Audio('Yaara.mp3');
-            audio.loop = true;
-            audio.play();
+            const audioPlayer = document.getElementById('audioPlayer');
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
         }
 
         setNewYearMessage();
