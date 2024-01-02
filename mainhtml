@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Year</title>
+    <title>Salma_sache</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -28,17 +28,108 @@
             margin-bottom: 10px;
         }
 
-        #salmaContainer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
+        #treeContainer {
+            position: relative;
         }
 
         #salmaName {
-            font-size: 60px;
+            font-size: 80px;
             font-weight: bold;
             color: #000; /* Black color */
+        }
+
+        .branch {
+            position: absolute;
+            width: 1px;
+            height: 50px;
+            background-color: #000;
+            top: 100px;
+        }
+
+        .branch1 {
+            transform: rotate(30deg);
+        }
+
+        .branch2 {
+            transform: rotate(60deg);
+        }
+
+        .branch3 {
+            transform: rotate(90deg);
+        }
+
+        .branch4 {
+            transform: rotate(120deg);
+        }
+
+        .branch5 {
+            transform: rotate(150deg);
+        }
+
+        .branch6 {
+            transform: rotate(180deg);
+        }
+
+        .branch7 {
+            transform: rotate(210deg);
+        }
+
+        .branch8 {
+            transform: rotate(240deg);
+        }
+
+        .branch9 {
+            transform: rotate(270deg);
+        }
+
+        .branchText {
+            position: absolute;
+            top: 60px;
+            font-size: 10px;
+            width: 50px;
+            text-align: center;
+        }
+
+        #branchText1 {
+            transform: rotate(-30deg);
+        }
+
+        #branchText2 {
+            transform: rotate(-60deg);
+        }
+
+        #branchText3 {
+            transform: rotate(-90deg);
+        }
+
+        #branchText4 {
+            transform: rotate(-120deg);
+        }
+
+        #branchText5 {
+            transform: rotate(-150deg);
+        }
+
+        #branchText6 {
+            transform: rotate(180deg);
+        }
+
+        #branchText7 {
+            transform: rotate(-210deg);
+        }
+
+        #branchText8 {
+            transform: rotate(-240deg);
+        }
+
+        #branchText9 {
+            transform: rotate(-270deg);
+        }
+
+        #heartButton {
+            font-size: 30px;
+            color: red;
+            cursor: pointer;
         }
 
         #message {
@@ -48,39 +139,11 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        #thought {
-            font-style: italic;
-            font-size: 24px;
-            margin-top: 10px;
-            overflow: hidden; /* Hide overflow to create a typing effect */
-            white-space: nowrap; /* Prevent line breaks */
-            border-right: 2px solid white; /* Create a cursor effect */
-            animation: typeWriter 3s steps(40) 1s forwards; /* Adjust the duration and steps as needed */
-            color: navy; /* Navy blue color */
-        }
-
-        #emojis {
-            font-size: 32px; /* Increased font size */
-            margin-top: 20px;
-            color: black; /* Black color */
-        }
-
         #salmaMissU {
             font-size: 24px; /* Adjust font size */
             font-weight: bold;
             color: black; /* Black color */
             margin-top: 20px;
-        }
-
-        #heartButton {
-            cursor: pointer;
-            font-size: 32px;
-            color: red;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        #heartButton:hover {
-            transform: scale(1.2);
         }
 
         @keyframes gradientAnimation {
@@ -103,52 +166,48 @@
     </style>
 </head>
 <body>
-    <div id="alhamdulillah"> ❤️ALHAMDUILLAH FOR EVERYTHING❤️</div>
-    <div id="salmaContainer">
+    <div id="treeContainer">
         <div id="salmaName">سلمہ</div>
-    </div>
-    <div id="message">Happy New Year, <span id="receiverName">SALMA SACHE _THE QUEEN ❤️</span>!</div>
-    <div id="thought"></div>
-    <div id="emojis">From  👧 <span style="color: navy; font-weight: bold;">ARMA</span> and 👦 <span style="color: navy; font-weight: bold;">HUZAIF</span>.</div>
-    <div id="salmaMissU">SALMA MISS U</div>
-    
-    <!-- Heart-shaped button -->
-    <div id="heartButton" onclick="toggleAudio()">❤️</div>
+        
+        <!-- Branches -->
+        <div class="branch branch1"></div>
+        <div class="branch branch2"></div>
+        <div class="branch branch3"></div>
+        <div class="branch branch4"></div>
+        <div class="branch branch5"></div>
+        <div class="branch branch6"></div>
+        <div class="branch branch7"></div>
+        <div class="branch branch8"></div>
+        <div class="branch branch9"></div>
 
-    <!-- Looping audio -->
-    <audio id="audioPlayer" loop>
-        <source src="Yaara.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+        <!-- Branch Texts -->
+        <div id="branchText1" class="branchText">My Princess</div>
+        <div id="branchText2" class="branchText">My Paradise</div>
+        <div id="branchText3" class="branchText">Ruler Of My Heart</div>
+        <div id="branchText4" class="branchText">My heartbeat</div>
+        <div id="branchText5" class="branchText">Most beautiful</div>
+        <div id="branchText6" class="branchText">Strong girl</div>
+        <div id="branchText7" class="branchText">My Sukoon</div>
+        <div id="branchText8" class="branchText">Love you Princess</div>
+        <div id="branchText9" class="branchText" style="font-size: 12px;">(make it bigger than other)</div>
+        
+        <!-- Heart Button -->
+        <div id="heartButton">❤️ Click on it ❤️</div>
+    </div>
 
     <script>
-        function setNewYearMessage() {
-            const receiverName = "SALMA SACHE _THE QUEEN ❤️";
-            document.getElementById('receiverName').innerText = receiverName;
-
-            const thoughts = [
-                "May the new year bring you blessings and guidance from Allah.",
-                "Professionally, may you achieve great success, for you are truly great and trustful.",
-                "May your journey be filled with motivation and inspiration, for you are an inspiration to us all.",
-                "Appreciation for your dedication and impactful contributions. We miss you and love you, Princess."
-            ];
-
-            // Combine all thoughts into one string with line breaks
-            const allThoughts = thoughts.join('\n');
-
-            document.getElementById('thought').innerText = allThoughts;
-        }
+        document.getElementById('heartButton').addEventListener('click', toggleAudio);
 
         function toggleAudio() {
             const audioPlayer = document.getElementById('audioPlayer');
-            if (audioPlayer.paused) {
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
+            audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
         }
 
-        setNewYearMessage();
+        function setSalmaSacheMessage() {
+            document.getElementById('alhamdulillah').innerText = "❤️ SALMA SACHE _THE QUEEN FOR FOREVER ❤️";
+        }
+
+        setSalmaSacheMessage();
     </script>
 </body>
 </html>
